@@ -1,4 +1,4 @@
-import React, { Children, useState } from 'react'
+import React, { useState } from 'react'
 import NewPost from './NewPost'
 import Votes from './Votes'
 
@@ -46,7 +46,8 @@ const Post = (props) => {
         
     }
 
-
+    // Used bootstrap documentation to understand how to develop cards
+    // https://getbootstrap.com/docs/4.0/components/card/
     return (
         <>
             <div className = "container card flex" >
@@ -79,7 +80,7 @@ const Post = (props) => {
 
                     {   
                         childrenList.map((childEntry) => (
-                            <Post entry = {childEntry} key = {childEntry.id}></Post>
+                            <Post entry = {childEntry} key = {childEntry}></Post>
                         ))
                     }
                 </div>    

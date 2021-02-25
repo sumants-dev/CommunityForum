@@ -6,7 +6,7 @@ const NewPost = (props) => {
     const [text, setText] = useState("")
 
     const submitForm = () => {
-        if (name !== "" || text !== "") {
+        if (name !== "" && text !== "") {
             submit(name, text)
         } else {
             alert("Empty Name or Post")
@@ -16,6 +16,8 @@ const NewPost = (props) => {
         setText("")
     }
     return (
+        // Got styling guidelines for forms from bootstrap docs
+        // https://getbootstrap.com/docs/4.0/components/forms/
         <>
             <div className = "container card text-center">
                 <form className = "container">
